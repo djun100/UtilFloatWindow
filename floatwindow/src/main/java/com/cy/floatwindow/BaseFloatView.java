@@ -9,6 +9,8 @@ import android.view.WindowManager;
 import android.widget.LinearLayout;
 
 import com.cy.io.Log;
+import com.cy.system.UtilEnv;
+import com.cy.view.UtilScreen;
 
 
 public abstract class BaseFloatView extends LinearLayout implements IFloatView{
@@ -64,7 +66,7 @@ public abstract class BaseFloatView extends LinearLayout implements IFloatView{
         WindowManager.LayoutParams params = createDefaultParams();
         params.gravity = Gravity.TOP | Gravity.LEFT;
         params.x = 0;
-        params.y = com.cy.System.UtilEnv.getScreenSize(getContext()).y/3;
+        params.y = UtilScreen.getScreenSize().y/3;
         params.width = LayoutParams.MATCH_PARENT;
         params.height = LayoutParams.WRAP_CONTENT;
         return params;
